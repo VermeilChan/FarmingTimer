@@ -1,4 +1,4 @@
-# FarmingTimer
+# FarmingTimer - Hypixel Skyblock
 
 <p align="center">
   <a href="https://github.com/VermeilChan/FarmingTimer">
@@ -45,7 +45,7 @@ If you have a GitHub account and have found this repository helpful, please cons
 
 ## Overview
 
-FarmingTimer is a straightforward program designed to track your farming time. Its goal is to keep things simple, easy to use, and lightweight.
+FarmingTimer app designed to track your farming time in Hypixel Skyblock. Its goal is to keep things simple, easy to use, and lightweight.
 
 ## Features
 
