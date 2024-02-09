@@ -11,9 +11,11 @@ class FarmingTimer(QWidget):
         self.setWindowIcon(QIcon('Assets/Icon/icon.ico'))
         self.setGeometry(100, 100, 200, 200)
 
+        font = QFont("Minecraft", 8)
+        QApplication.setFont(font)
+
         self.timer_label = QLabel("00:00:00")
-        font = QFont("Arial", 24)
-        self.timer_label.setFont(font)
+        self.timer_label.setFont(QFont("Minecraft", 24))
 
         self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start")
         self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause")
