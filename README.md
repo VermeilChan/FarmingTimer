@@ -47,6 +47,20 @@ If you have a GitHub account and have found this repository helpful, please cons
 
 FarmingTimer app designed to track your farming time in Hypixel Skyblock. Its goal is to keep things simple, easy to use, and lightweight.
 
+## Requirements
+
+Before installing FarmingTimer, ensure that your system meets the following requirements:
+
+| **Operating System**    | **Versions**                                                     |
+|-------------------------|------------------------------------------------------------------|
+| **Windows**             | 11, 10                                                           |
+| **GNU/Linux**           | Debian 12/11, Ubuntu 22.04.3, Fedora 39/38, Arch Linux, OpenSUSE |
+| **MacOS**               | Currently not supported.  Use [WineHQ](https://www.winehq.org/)  |
+
+| **RAM Usage**        | **Disk Space**       |
+|----------------------|----------------------|
+| 30MB                 | 100MB                |
+
 ## Features
 
 - Start, pause, resume, and stop timer functionality.
