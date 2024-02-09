@@ -9,16 +9,21 @@ class FarmingTimer(QWidget):
 
         self.setWindowTitle("Farming Timer")
         self.setWindowIcon(QIcon('Assets/Icon/icon.ico'))
-        self.setGeometry(100, 100, 300, 200)
+        self.setGeometry(100, 100, 100, 100)
 
         self.timer_label = QLabel("00:00:00")
         font = QFont("Arial", 24)
         self.timer_label.setFont(font)
 
-        self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start")
+        self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start",)
         self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause")
         self.stop_button = QPushButton(QIcon('Assets/buttons/stop_icon.svg'), "Stop")
         self.resume_button = QPushButton(QIcon('Assets/buttons/resume_icon.svg'), "Resume")
+
+        self.start_button.setToolTip("Start the timer")
+        self.pause_button.setToolTip("Pause the timer")
+        self.stop_button.setToolTip("Stop the timer")
+        self.resume_button.setToolTip("Resume the timer")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.timer_label, alignment=Qt.AlignCenter)
@@ -46,6 +51,7 @@ class FarmingTimer(QWidget):
         self.resume_button.setEnabled(False)
 
         self.timer_running = False
+        self.setMaximumSize(self.size())
 
     def start_timer(self):
         self.timer.start(1000)
