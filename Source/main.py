@@ -9,13 +9,13 @@ class FarmingTimer(QWidget):
 
         self.setWindowTitle("Farming Timer")
         self.setWindowIcon(QIcon('Assets/Icon/icon.ico'))
-        self.setGeometry(100, 100, 100, 100)
+        self.setGeometry(100, 100, 200, 200)
 
         self.timer_label = QLabel("00:00:00")
         font = QFont("Arial", 24)
         self.timer_label.setFont(font)
 
-        self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start",)
+        self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start")
         self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause")
         self.stop_button = QPushButton(QIcon('Assets/buttons/stop_icon.svg'), "Stop")
         self.resume_button = QPushButton(QIcon('Assets/buttons/resume_icon.svg'), "Resume")
@@ -90,7 +90,6 @@ class FarmingTimer(QWidget):
             minutes = (self.time_elapsed % 3600) // 60
             seconds = self.time_elapsed % 60
             self.timer_label.setText(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
