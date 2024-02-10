@@ -18,14 +18,12 @@ class FarmingTimer(QWidget):
         self.timer_label.setFont(QFont("Minecraft", 24))
 
         self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start")
-        self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause")
+        self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause/Resume")
         self.stop_button = QPushButton(QIcon('Assets/buttons/stop_icon.svg'), "Stop")
-        self.resume_button = QPushButton(QIcon('Assets/buttons/resume_icon.svg'), "Resume")
 
         self.start_button.setToolTip("Start the timer")
-        self.pause_button.setToolTip("Pause the timer")
+        self.pause_button.setToolTip("Pause/Resume the timer")
         self.stop_button.setToolTip("Stop the timer")
-        self.resume_button.setToolTip("Resume the timer")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.timer_label, alignment=Qt.AlignCenter)
@@ -34,7 +32,6 @@ class FarmingTimer(QWidget):
         button_layout.addWidget(self.start_button)
         button_layout.addWidget(self.pause_button)
         button_layout.addWidget(self.stop_button)
-        button_layout.addWidget(self.resume_button)
 
         self.layout.addLayout(button_layout)
         self.setLayout(self.layout)
@@ -44,15 +41,11 @@ class FarmingTimer(QWidget):
         self.time_elapsed = 0
 
         self.start_button.clicked.connect(self.start_timer)
-        self.pause_button.clicked.connect(self.pause_timer)
+        self.pause_button.clicked.connect(self.pause_resume_timer)
         self.stop_button.clicked.connect(self.stop_timer)
-        self.resume_button.clicked.connect(self.resume_timer)
 
         self.pause_button.setEnabled(False)
         self.stop_button.setEnabled(False)
-        self.resume_button.setEnabled(False)
-
-        self.timer_running = False
         self.setMaximumSize(self.size())
 
     def start_timer(self):
@@ -60,38 +53,31 @@ class FarmingTimer(QWidget):
         self.start_button.setEnabled(False)
         self.pause_button.setEnabled(True)
         self.stop_button.setEnabled(True)
-        self.resume_button.setEnabled(False)
-        self.timer_running = True
 
-    def pause_timer(self):
-        self.timer.stop()
-        self.pause_button.setEnabled(False)
-        self.resume_button.setEnabled(True)
-        self.timer_running = False
+    def pause_resume_timer(self):
+        if self.timer.isActive():
+            self.timer.stop()
+            self.pause_button.setText("Resume")
+            self.pause_button.setIcon(QIcon('Assets/buttons/resume_icon.svg'))
+        else:
+            self.timer.start(1000)
+            self.pause_button.setText("Pause")
+            self.pause_button.setIcon(QIcon('Assets/buttons/pause_icon.svg'))
 
     def stop_timer(self):
         self.timer.stop()
         self.start_button.setEnabled(True)
         self.pause_button.setEnabled(False)
         self.stop_button.setEnabled(False)
-        self.resume_button.setEnabled(False)
-        self.time_elapsed = 0
+        self.time_elapsed = -1
         self.update_timer()
-        self.timer_running = False
-
-    def resume_timer(self):
-        self.timer.start(1000)
-        self.pause_button.setEnabled(True)
-        self.resume_button.setEnabled(False)
-        self.timer_running = True
 
     def update_timer(self):
-        if self.timer_running:
-            self.time_elapsed += 1
-            hours = self.time_elapsed // 3600
-            minutes = (self.time_elapsed % 3600) // 60
-            seconds = self.time_elapsed % 60
-            self.timer_label.setText(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+        self.time_elapsed += 1
+        hours = self.time_elapsed // 3600
+        minutes = (self.time_elapsed % 3600) // 60
+        seconds = self.time_elapsed % 60
+        self.timer_label.setText(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
