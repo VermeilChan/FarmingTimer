@@ -61,14 +61,14 @@ class FarmingTimer(QWidget):
             tray_menu = QMenu()
             self.tray_icon.setContextMenu(tray_menu)
             
-            open_action = QAction("Open", self)
-            open_action.triggered.connect(self.show)
+            show_action = QAction("Show", self)
+            show_action.triggered.connect(self.show)
             
-            exit_action = QAction("Exit", self)
-            exit_action.triggered.connect(self.exit_application)
+            quit_action = QAction("Quit", self)
+            quit_action.triggered.connect(self.exit_application)
             
-            tray_menu.addAction(open_action)
-            tray_menu.addAction(exit_action)
+            tray_menu.addAction(show_action)
+            tray_menu.addAction(quit_action)
 
     def start_timer(self):
         self.timer.start(1000)
