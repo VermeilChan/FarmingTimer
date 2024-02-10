@@ -8,7 +8,7 @@ class FarmingTimer(QWidget):
         super().__init__()
 
         self.setWindowTitle("Farming Timer")
-        self.setWindowIcon(QIcon('Assets/Icon/icon.ico'))
+        self.setWindowIcon(QIcon('Assets/Icons/program_icon.ico'))
         self.setGeometry(100, 100, 200, 200)
 
         font = QFont("Minecraft", 8)
@@ -17,9 +17,9 @@ class FarmingTimer(QWidget):
         self.timer_label = QLabel("00:00:00")
         self.timer_label.setFont(QFont("Minecraft", 24))
 
-        self.start_button = QPushButton(QIcon('Assets/buttons/start_icon.svg'), "Start")
-        self.pause_button = QPushButton(QIcon('Assets/buttons/pause_icon.svg'), "Pause/Resume")
-        self.stop_button = QPushButton(QIcon('Assets/buttons/stop_icon.svg'), "Stop")
+        self.start_button = QPushButton(QIcon('Assets/Icons/start_icon.svg'), "Start")
+        self.pause_button = QPushButton(QIcon('Assets/Icons/pause_icon.svg'), "Pause/Resume")
+        self.stop_button = QPushButton(QIcon('Assets/Icons/stop_icon.svg'), "Stop")
 
         self.start_button.setToolTip("Start the timer")
         self.pause_button.setToolTip("Pause/Resume the timer")
@@ -58,11 +58,11 @@ class FarmingTimer(QWidget):
         if self.timer.isActive():
             self.timer.stop()
             self.pause_button.setText("Resume")
-            self.pause_button.setIcon(QIcon('Assets/buttons/resume_icon.svg'))
+            self.pause_button.setIcon(QIcon('Assets/Icons/resume_icon.svg'))
         else:
             self.timer.start(1000)
             self.pause_button.setText("Pause")
-            self.pause_button.setIcon(QIcon('Assets/buttons/pause_icon.svg'))
+            self.pause_button.setIcon(QIcon('Assets/Icons/pause_icon.svg'))
 
     def stop_timer(self):
         self.timer.stop()
