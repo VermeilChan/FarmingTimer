@@ -39,7 +39,9 @@ If you have a GitHub account and have found this repository helpful, please cons
 ## Table of contents
 
 - [Overview](#overview)
+- [Requirements](#requirements)
 - [Features](#features)
+- [Installation](#installation)
 - [License](#license)
 - [Credits](#credits)
 
@@ -65,6 +67,10 @@ Before installing FarmingTimer, ensure that your system meets the following requ
 
 - Start, pause, resume, and stop timer functionality.
 - easy-to-use user interface & lightweight.
+
+## Installation
+
+To install FarmingTimer, refer to the [documentations](Docs/Installtion.md)
 
 ## License
 
