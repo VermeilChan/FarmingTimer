@@ -1,78 +1,45 @@
 #!/bin/bash
 
-echo "This script will download the required dependencies to use FarmingTimer."
+echo "Welcome to the FarmingTimer setup script."
+echo "This script will help you set up the necessary dependencies to use FarmingTimer."
 
 read -p "Do you want to continue with the setup? (y/n): " install_dependencies
-echo
 
 if [[ "$install_dependencies" != "y" ]]; then
     echo "Exiting setup. No dependencies will be installed."
     exit 0
 fi
-echo
 
-read -p "Do you want to install the GUI version? (y/n): " install_xcb_libraries
-echo
+read -p "Please enter your package manager (apt/dnf/pacman/zypper): " package_manager
 
-if [[ "$install_xcb_libraries" == "y" ]]; then
-    read -p "Enter your package manager (apt/dnf/pacman/zypper): " package_manager
-    echo
-
-    case $package_manager in
-        apt|dnf|pacman|zypper)
-            ;;
-        *)
-            echo "Error: Invalid package manager. Please enter one of the following: apt, dnf, pacman, zypper."
-            exit 1
-            ;;
-    esac
-    echo
-
-    echo "Please wait, downloading dependencies..."
-    sudo "${package_manager}" update -y
-
-    echo "Installing necessary libraries for GUI support..."
-    case $package_manager in
-        apt)
-            sudo "${package_manager}" install libxcb-cursor0 -y
-            ;;
-        dnf)
-            sudo "${package_manager}" install xcb-util-cursor -y
-            ;;
-        pacman)
-            sudo "${package_manager}" -S xcb-util-cursor --noconfirm
-            ;;
-        zypper)
-            sudo "${package_manager}" install -y libxcb-cursor0
-            ;;
-    esac
-fi
-
-echo "Installing Python 3, pip, and venv..."
 case $package_manager in
-    apt|dnf)
-        sudo "${package_manager}" install python3 python3-pip python3-venv -y
+    apt)
+        sudo apt update -y
+        sudo apt install libxcb-cursor0 python3 python3-pip python3-venv -y
+        ;;
+    dnf)
+        sudo dnf update -y
+        sudo dnf install xcb-util-cursor python3 python3-pip python3-virtualenv -y
         ;;
     pacman)
-        sudo "${package_manager}" -S python python-pip python-virtualenv --noconfirm
+        sudo pacman -Syu --noconfirm
+        sudo pacman -S xcb-util-cursor python python-pip python-virtualenv --noconfirm
         ;;
     zypper)
-        sudo "${package_manager}" install -y python3 python3-pip python3-virtualenv
+        sudo zypper update
+        sudo zypper install -y libxcb-cursor0 python3 python3-pip python3-virtualenv
         ;;
     *)
-        echo "Error: Unsupported package manager. Please install Python 3, pip, and venv manually."
+        echo "Error: Unsupported package manager. Please install Python 3, pip, venv, and libxcb manually."
         exit 1
         ;;
 esac
 
-echo "Creating and activating a virtual environment..."
 python3 -m venv farmingtimer
 source farmingtimer/bin/activate
 
-echo "Installing Python packages from requirements.txt..."
-pip install -r requirements.txt
+pip install -r requirements.txt || { echo "Failed to install Python packages."; deactivate; exit 1; }
 
-echo "Deactivating the virtual environment..."
 deactivate
 
 cat <<EOF
