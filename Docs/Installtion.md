@@ -10,11 +10,11 @@
 
 1. Visit the [releases page](https://github.com/VermeilChan/FarmingTimer/releases/latest) and download the latest stable release: `FarmingTimer-1.X.X-x64-GNU-Linux.tar.gz`.
 2. Extract the downloaded archive to a directory of your choice.
-3. Run Install-Deps.sh
 
-```sh
-bash Install-Deps.sh
-```
+3. Run Install-Deps.sh
+    ```sh
+    bash Install-Deps.sh
+    ```
 
 ### Run the Application
 
