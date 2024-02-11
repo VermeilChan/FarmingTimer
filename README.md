@@ -1,36 +1,36 @@
-# FarmingTimer - Hypixel Skyblock
+# FarmTimer - Hypixel Skyblock
 
 <p align="center">
-  <a href="https://github.com/VermeilChan/FarmingTimer">
+  <a href="https://github.com/VermeilChan/FarmTimer">
     <img src="Assets/readme.png" alt="Stupid Car">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/VermeilChan/FarmingTimer/graphs/contributors">
-    <img alt="Contributors" src="https://img.shields.io/github/contributors/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/graphs/contributors">
+    <img alt="Contributors" src="https://img.shields.io/github/contributors/VermeilChan/FarmTimer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/release/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/releases">
+    <img alt="Latest Release" src="https://img.shields.io/github/release/VermeilChan/FarmTimer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/releases">
-    <img alt="Downloads" src="https://img.shields.io/github/downloads/VermeilChan/FarmingTimer/total" />
+  <a href="https://github.com/VermeilChan/FarmTimer/releases">
+    <img alt="Downloads" src="https://img.shields.io/github/downloads/VermeilChan/FarmTimer/total" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/VermeilChan/FarmTimer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/issues">
-    <img alt="Open Issues" src="https://img.shields.io/github/issues/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/issues">
+    <img alt="Open Issues" src="https://img.shields.io/github/issues/VermeilChan/FarmTimer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/pulls">
-    <img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/pulls">
+    <img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/VermeilChan/FarmTimer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmingTimer/commits/main">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/VermeilChan/FarmingTimer" />
+  <a href="https://github.com/VermeilChan/FarmTimer/commits/main">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/VermeilChan/FarmTimer" />
   </a>
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/VermeilChan/FarmingTimer" />
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/VermeilChan/FarmTimer" />
   </a>
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VermeilChan/FarmingTimer" />
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VermeilChan/FarmTimer" />
   </a>
 </p>
 
@@ -47,11 +47,11 @@ If you have a GitHub account and have found this repository helpful, please cons
 
 ## Overview
 
-FarmingTimer is designed to track your farming time in Hypixel Skyblock. Its goal is to keep things simple, easy to use, and lightweight.
+FarmTimer simplifies farming time tracking in Hypixel Skyblock with a focus on simplicity, user-friendliness, and efficiency.
 
 ## Requirements
 
-Before installing FarmingTimer, ensure that your system meets the following requirements:
+Before installing FarmTimer, ensure that your system meets the following requirements:
 
 | **Operating System**    | **Versions**                                                     |
 |-------------------------|------------------------------------------------------------------|
@@ -70,7 +70,7 @@ Before installing FarmingTimer, ensure that your system meets the following requ
 
 ## Installation
 
-To install FarmingTimer, refer to the [documentations](Docs/Installtion.md)
+To install FarmTimer, refer to the [documentations](Docs/Installtion.md)
 
 ## License
 
