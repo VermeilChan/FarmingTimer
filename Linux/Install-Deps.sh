@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Welcome to the FarmingTimer setup script."
 echo "This script will help you set up the necessary dependencies to use FarmingTimer."
 
 read -p "Do you want to continue with the setup? (y/n): " install_dependencies
@@ -35,8 +34,8 @@ case $package_manager in
         ;;
 esac
 
-python3 -m venv farmingtimer
-source farmingtimer/bin/activate
+python3 -m venv farmtimer
+source farmtimer/bin/activate
 
 pip install -r requirements.txt || { echo "Failed to install Python packages."; deactivate; exit 1; }
 

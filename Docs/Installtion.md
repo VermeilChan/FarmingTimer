@@ -2,13 +2,13 @@
 
 ## Windows
 
-1. Visit the [releases page](https://github.com/VermeilChan/FarmingTimer/releases/latest) and download the latest stable release: `FarmingTimer-1.X.X-x64-Windows.7z`.
+1. Visit the [releases page](https://github.com/VermeilChan/FarmTimer/releases/latest) and download the latest stable release: `FarmTimer-1.X.X-x64-Windows.7z`.
 2. Extract the downloaded archive to a preferred location.
-3. Locate and execute `Farming Timer.exe` to launch the application.
+3. Locate and execute `FarmTimer.exe` to launch the application.
 
 ## GNU/Linux
 
-1. Visit the [releases page](https://github.com/VermeilChan/FarmingTimer/releases/latest) and download the latest stable release: `FarmingTimer-1.X.X-x64-GNU-Linux.tar.gz`.
+1. Visit the [releases page](https://github.com/VermeilChan/FarmTimer/releases/latest) and download the latest stable release: `FarmTimer-1.X.X-x64-GNU-Linux.tar.gz`.
 2. Extract the downloaded archive to a directory of your choice.
 
 3. Run Install-Deps.sh

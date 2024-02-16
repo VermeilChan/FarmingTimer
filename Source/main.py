@@ -11,9 +11,6 @@ class FarmingTimer(QWidget):
         self.setWindowIcon(QIcon('Assets/Icons/program_icon.ico'))
         self.setGeometry(100, 100, 100, 110)
 
-        font = QFont("Roboto", 10)
-        QApplication.setFont(font)
-
         self.timer_label = QLabel("00:00:00")
         self.timer_label.setFont(QFont("Roboto", 24))
 

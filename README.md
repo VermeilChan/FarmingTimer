@@ -47,7 +47,7 @@ If you have a GitHub account and have found this repository helpful, please cons
 
 ## Overview
 
-FarmTimer simplifies farming time tracking in Hypixel Skyblock with a focus on simplicity, user-friendliness, and efficiency.
+FarmTimer simplifies farming time tracking in Hypixel-Skyblock with a focus on simplicity, user-friendliness, and efficiency.
 
 ## Requirements
 

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source farmingtimer/bin/activate
+source farmtimer/bin/activate
 
 python3 Source/main.py
