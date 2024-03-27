@@ -1,36 +1,36 @@
-# FarmTimer - Hypixel Skyblock
+# Timer - Hypixel Skyblock
 
 <p align="center">
-  <a href="https://github.com/VermeilChan/FarmTimer">
+  <a href="https://github.com/VermeilChan/Timer">
     <img src="Assets/readme.png" alt="Stupid Car">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/VermeilChan/FarmTimer/graphs/contributors">
-    <img alt="Contributors" src="https://img.shields.io/github/contributors/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/graphs/contributors">
+    <img alt="Contributors" src="https://img.shields.io/github/contributors/VermeilChan/Timer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/release/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/releases">
+    <img alt="Latest Release" src="https://img.shields.io/github/release/VermeilChan/Timer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/releases">
-    <img alt="Downloads" src="https://img.shields.io/github/downloads/VermeilChan/FarmTimer/total" />
+  <a href="https://github.com/VermeilChan/Timer/releases">
+    <img alt="Downloads" src="https://img.shields.io/github/downloads/VermeilChan/Timer/total" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/VermeilChan/Timer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/issues">
-    <img alt="Open Issues" src="https://img.shields.io/github/issues/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/issues">
+    <img alt="Open Issues" src="https://img.shields.io/github/issues/VermeilChan/Timer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/pulls">
-    <img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/pulls">
+    <img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/VermeilChan/Timer" />
   </a>
-  <a href="https://github.com/VermeilChan/FarmTimer/commits/main">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/VermeilChan/FarmTimer" />
+  <a href="https://github.com/VermeilChan/Timer/commits/main">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/VermeilChan/Timer" />
   </a>
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/VermeilChan/FarmTimer" />
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/VermeilChan/Timer" />
   </a>
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VermeilChan/FarmTimer" />
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VermeilChan/Timer" />
   </a>
 </p>
 
@@ -39,38 +39,12 @@ If you have a GitHub account and have found this repository helpful, please cons
 ## Table of contents
 
 - [Overview](#overview)
-- [Requirements](#requirements)
-- [Features](#features)
-- [Installation](#installation)
 - [License](#license)
 - [Credits](#credits)
 
 ## Overview
 
-FarmTimer simplifies farming time tracking in Hypixel-Skyblock with a focus on simplicity, user-friendliness, and efficiency.
-
-## Requirements
-
-Before installing FarmTimer, ensure that your system meets the following requirements:
-
-| **Operating System**    | **Versions**                                                     |
-|-------------------------|------------------------------------------------------------------|
-| **Windows**             | 11, 10                                                           |
-| **GNU/Linux**           | Debian 12/11, Ubuntu 22.04.3, Fedora 39/38, Arch Linux, OpenSUSE |
-| **MacOS**               | Currently not supported.  Use [WineHQ](https://www.winehq.org/)  |
-
-| **RAM Usage**        | **Disk Space**       |
-|----------------------|----------------------|
-| 30MB                 | 100MB                |
-
-## Features
-
-- Start, pause, resume, and stop timer functionality.
-- easy-to-use user interface & lightweight.
-
-## Installation
-
-To install FarmTimer, refer to the [documentations](Docs/Installtion.md)
+Literally just a timer lol.
 
 ## License
 

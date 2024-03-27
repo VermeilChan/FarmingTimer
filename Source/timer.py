@@ -3,20 +3,20 @@ from PySide6.QtCore import QTimer, Qt
 from PySide6.QtGui import QIcon, QFont, QAction
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSystemTrayIcon, QMenu
 
-class FarmingTimer(QWidget):
+class Timer(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Farming Timer")
-        self.setWindowIcon(QIcon('Assets/Icons/program_icon.ico'))
+        self.setWindowTitle("Timer")
+        self.setWindowIcon(QIcon('Assets/Icons/program.ico'))
         self.setGeometry(100, 100, 100, 110)
 
         self.timer_label = QLabel("00:00:00")
-        self.timer_label.setFont(QFont("Roboto", 24))
+        self.timer_label.setFont(QFont("Arial", 24))
 
-        self.start_button = QPushButton(QIcon('Assets/Icons/start_icon.svg'), "Start")
-        self.pause_button = QPushButton(QIcon('Assets/Icons/pause_icon.svg'), "Pause/Resume")
-        self.stop_button = QPushButton(QIcon('Assets/Icons/stop_icon.svg'), "Stop")
+        self.start_button = QPushButton(QIcon('Assets/Icons/start.svg'), "Start")
+        self.pause_button = QPushButton(QIcon('Assets/Icons/pause.svg'), "Pause/Resume")
+        self.stop_button = QPushButton(QIcon('Assets/Icons/stop.svg'), "Stop")
 
         self.start_button.setToolTip("Start the timer")
         self.pause_button.setToolTip("Pause/Resume the timer")
@@ -46,24 +46,23 @@ class FarmingTimer(QWidget):
         self.setMaximumSize(self.size())
 
         self.tray_icon = QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QIcon('Assets/Icons/program_icon.ico'))
+        self.tray_icon.setIcon(QIcon('Assets/Icons/icon.ico'))
 
-        self.create_tray_menu()
-
+        self.tray_menu()
         self.tray_icon.show()
 
-    def create_tray_menu(self):
+    def tray_menu(self):
         tray_menu = self.tray_icon.contextMenu()
         if not tray_menu:
             tray_menu = QMenu()
             self.tray_icon.setContextMenu(tray_menu)
-            
+
             show_action = QAction("Show", self)
             show_action.triggered.connect(self.show)
-            
+
             quit_action = QAction("Quit", self)
             quit_action.triggered.connect(self.exit_application)
-            
+
             tray_menu.addAction(show_action)
             tray_menu.addAction(quit_action)
 
@@ -77,11 +76,11 @@ class FarmingTimer(QWidget):
         if self.timer.isActive():
             self.timer.stop()
             self.pause_button.setText("Resume")
-            self.pause_button.setIcon(QIcon('Assets/Icons/resume_icon.svg'))
+            self.pause_button.setIcon(QIcon('Assets/Icons/resume.svg'))
         else:
             self.timer.start(1000)
             self.pause_button.setText("Pause")
-            self.pause_button.setIcon(QIcon('Assets/Icons/pause_icon.svg'))
+            self.pause_button.setIcon(QIcon('Assets/Icons/pause.svg'))
 
     def stop_timer(self):
         self.timer.stop()
@@ -109,6 +108,6 @@ class FarmingTimer(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle('Fusion')
-    timer_window = FarmingTimer()
+    timer_window = Timer()
     timer_window.show()
     sys.exit(app.exec())
