@@ -44,7 +44,8 @@ If you have a GitHub account and have found this repository helpful, please cons
 
 ## Overview
 
-Literally just a timer lol.
+Literally just a timer lol.<br>
+I made this because i couldn't find anything that met my needs.
 
 ## License
 
